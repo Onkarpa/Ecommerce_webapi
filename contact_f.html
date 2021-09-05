@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+
+
+
+<div class='container-fixed '>
+  <img src='/static/contact1.jpg' width='900' height='400'>
+    
+  </img>
+</div>
+<h5 style='    position: absolute;
+    top: 200px;
+    left:290px;
+    color: khaki;
+    background-color: black;
+    border-top: outset;
+    size: landscape;
+    backface-visibility: hidden;
+    font-weight: bold'> Welcome to Om Electronic </h5>
+  <h5 style='    position: absolute;
+    top: 250px;
+    left:250px;
+    color: khaki;
+    background-color: black;
+    border-top: outset;
+    size: landscape;
+    backface-visibility: hidden;
+    font-weight: bold'> Submit bellow form for connection... </h5>
+
+
+<div class='container-fixed'>
+  
+  <body>
+    <div class="container px-7 py-3 ">
+      <form method="POST" class "post_form" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type='submit' class="btn btn-primary"> Submit </button>
+      </form>
+    </div>
+
+
+</div>
+
+</body>
+
+</html>
+
+
+{% endblock body %}

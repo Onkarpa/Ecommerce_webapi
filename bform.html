@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+
+
+
+<div class='container mx-0 my-0 px-0 py-0'>
+  <img src='/static/blur.jpg' width='1079' height='500'>
+
+  </img>
+</div>
+
+<div class='container'>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .bg-image {
+      /* The image used */
+      background-image: url("photographer.jpg");
+
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 95%;
+      height: 70%;
+      padding: 20px;
+      text-align: center;
+
+
+    }
+  </style>
+
+  <body>
+
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+      <h1 style="font-size:50px">Welcome</h1>
+      <p>Send Your Detail and Stay Connected with Us...</p>
+
+
+      <p>Submit the below form for coordination - - - ></p>
+
+      <h6> Email:omelectronic@gmail.com </h6>
+    </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="contact-form">
+        <div class="form-header text-center">
+            <h2>Get in touch</h2>
+    
+        </div>
+        <form method='POST' action='/contact_f/'>
+        {% csrf_token %}
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <input type="text" name="first_name" placeholder="First Name" class="form-control" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="text" name="last_name" placeholder="Last Name" class="form-control">
+                </div>
+            </div>                  
+                <div class="form-group">
+                    <input type="email" name="email_id" placeholder="Email Id" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Mobile_no" placeholder="Mobile Number" class="form-control">
+                </div>
+                <div class="form-group ">
+                        <input type="text" name="address" placeholder="Address" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="city_area" placeholder="City" class="form-control">
+                    </div>
+                    <div class="form-group ">
+                    <input type="text" name="zip_no" placeholder="Zip" class="form-control">
+                </div>
+            
+            
+            <div class="form-group">
+                <button type='Submit' class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+
+    
+<style>
+.contact-form {
+    background-color: #fbfbfb;
+    padding: 15px 20px 15px;
+    border: 1px solid #ececec;
+    width: 450px;
+    margin: 50px auto;
+}
+.contact-form .form-header {
+    margin-bottom: 40px;
+}
+.contact-form form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 120px;
+}
+.contact-form form .btn {
+    width: 100%;
+}
+.contact-form .form-header h2 {
+    font-weight: bold;
+    color: #03A9F4;
+}
+
+/*-- CSS for extra small devices--*/
+@media (max-width: 767px){
+.contact-form {
+    width: 90%;
+}
+}
+</style>
+    </div>
+</body>
+</html
+{% endblock body %}
